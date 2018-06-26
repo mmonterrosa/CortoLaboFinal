@@ -6,6 +6,7 @@
 package Gui;
 
 
+import java.awt.Container;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -16,11 +17,16 @@ import javax.swing.JTextField;
  * @author LN710Q
  */
 public class Gui extends JFrame{
-    JTextField txt1,txt2, txt3, txt4;
+         JTextField txt1,txt2, txt3, txt4;
         JLabel lbl1,lbl2,lbl3,lbl4;
         JButton btn1,btn2,btn3,btn4,btn5;
 
     public Gui() {
+        super("Inventario");
+        setLayout(null);
+        setSize(600,600);
+        Container container = getContentPane();
+        
         txt1 = new JTextField();
         txt2 = new JTextField();
         txt3 = new JTextField();
@@ -29,12 +35,31 @@ public class Gui extends JFrame{
         lbl1 = new JLabel("N Inscripcion");
         lbl2 = new JLabel("Nombre");
         lbl3 = new JLabel("Edad");
-        lbl1 = new JLabel("Propietario");
+        lbl4 = new JLabel("Propietario");
         
         btn1 = new JButton("Buscar");
-        btn1 = new JButton("Insertar");
-        btn1 = new JButton("Actualizar");
-        btn1 = new JButton("Eliminar");
+        btn2 = new JButton("Insertar");
+        btn3 = new JButton("Actualizar");
+        btn4 = new JButton("Eliminar");
+        
+        container.add(lbl1);
+        container.add(lbl2);
+        container.add(lbl3);
+        container.add(lbl4);
+        container.add(txt1);
+        container.add(txt2);
+        container.add(txt3);
+        container.add(txt4);
+        container.add(btn1);
+        container.add(btn2);
+        container.add(btn3);
+        container.add(btn4);
+        
+        
+        lbl1.setBounds(10, 10, 10, 10);
+
+        
+        
     }
         
     

@@ -89,26 +89,20 @@ public class AlumnoDao {
             ps.setString(2, a.getNombres());
             ps.setString(3, a.getApellidos());
             ps.setInt(4, a.getEdad());
+            ps.setString(5, a.getUniversidad());
+            ps.setInt(5, a.getEstado());
             
             rs = ps.executeQuery();
-            
-            rs.next();
-            a = new Alumno();
-            a.setCarnet(rs.getString(1));
-            a.setId(rs.getInt(0));
-            a.setNombres(rs.getString(2));
-            a.setApellidos(rs.getString(3));
-            a.setEdad(rs.getInt(4));
-            a.setUniversidad(rs.getString(5));
-            a.setEstado(rs.getInt(6));
+
+           
         }catch(Exception e){
-       
+       e.printStackTrace();
             
         }finally{
             con.cerrarConexion();
             
         }
-        return a;
+       
     }
     
     

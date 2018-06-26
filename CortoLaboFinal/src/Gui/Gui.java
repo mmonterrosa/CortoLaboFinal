@@ -57,7 +57,18 @@ public class Gui extends JFrame{
         
         
         lbl1.setBounds(10, 10, 10, 10);
-
+        txt1.setBounds(25, 10, 25, 25);
+        
+        lbl2.setBounds(10, 25, 10, 10);
+        txt2.setBounds(25, 25, 25, 25);
+        lbl4.setBounds(75, 25, 10, 10);
+        txt3.setBounds(100, 25, 25, 25);
+        
+        lbl3.setBounds(10, 50, 10, 10);
+        txt4.setBounds(25, 50, 25, 25);
+        
+        
+        
         
         
     }

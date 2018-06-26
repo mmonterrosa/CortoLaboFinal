@@ -6,7 +6,11 @@
 package Gui;
 
 
+import Dao.AlumnoDao;
+import Modelo.Alumno;
 import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -20,6 +24,8 @@ public class Gui extends JFrame{
          JTextField txt1,txt2, txt3, txt4;
         JLabel lbl1,lbl2,lbl3,lbl4;
         JButton btn1,btn2,btn3,btn4,btn5;
+        
+        AlumnoDao ad = new AlumnoDao();
 
     public Gui() {
         super("Inventario");
@@ -66,8 +72,26 @@ public class Gui extends JFrame{
         
         lbl3.setBounds(10, 50, 10, 10);
         txt4.setBounds(25, 50, 25, 25);
+        System.out.println("");
         
+        btn1.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Alumno a = ad.readByCartnet(txt1.getText());
+                
+               }
+            
+        });
         
+        btn2.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Alumno a = new Alumno();
+                ad.insert(a);
+                
+               }
+            
+        });
         
         
         
